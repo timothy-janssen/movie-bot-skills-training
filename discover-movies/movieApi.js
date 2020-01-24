@@ -3,7 +3,7 @@ const config = require('../config');
 
 function discoverMovie(kind, genreId, language) {
   return moviedbApiCall(kind, genreId, language).then(response =>
-    apiResultToCarousselle(response.data.results, kind)
+    return apiResultToCarousselle(response.data.results, kind)
   );
 }
 
